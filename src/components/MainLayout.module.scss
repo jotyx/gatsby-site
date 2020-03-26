@@ -1,12 +1,8 @@
 @import "../styles/index";
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .root {
   margin: 0 auto;
+  height: 100%;
 
   width: $container-xs-width;
 
@@ -26,5 +22,5 @@ body {
     width: $container-xl-width;
   }
 
-  background-color: $color-blue;
+  background-color: $color-grey;
 }

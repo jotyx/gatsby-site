@@ -1,8 +1,9 @@
 import React from "react";
 import {Link} from "gatsby";
 
+import {MainLayout, Text} from "components";
 import SEO from "../components/seo";
-import {MainLayout, Text} from "../components";
+import "../styles/index.scss";
 
 const IndexPage = () => (
     <MainLayout>
