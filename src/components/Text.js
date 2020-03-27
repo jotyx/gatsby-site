@@ -25,7 +25,7 @@ export const Text = ({value, fontSize, bold, textAlign, paragraphs}) => (
     />
 );
 
-Text.FontSizeEnum = Object.freeze({
+Text.SIZE = Object.freeze({
     SIZE_13: "fontSize13",
     SIZE_14: "fontSize14",
     SIZE_16: "fontSize16",
@@ -43,14 +43,14 @@ Text.TextAlignEnum = Object.freeze({
 
 Text.propTypes = {
     value: PropTypes.string.isRequired,
-    fontSize: PropTypes.oneOf(Object.values(Text.FontSizeEnum)),
+    fontSize: PropTypes.oneOf(Object.values(Text.SIZE)),
     bold: PropTypes.bool,
     textAlign: PropTypes.oneOf(Object.values(Text.TextAlignEnum)),
     paragraphs: PropTypes.bool,
 };
 
 Text.defaultProps = {
-    fontSize: Text.FontSizeEnum.SIZE_16,
+    fontSize: Text.SIZE.SIZE_16,
     bold: false,
     textAlign: undefined,
     paragraphs: false,
