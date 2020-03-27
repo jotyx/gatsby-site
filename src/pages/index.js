@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import {Link} from "gatsby";
 
-import {MainLayout, Text, MarginLayout, Seo, VerticalSpace} from "components";
+import {MainLayout, Text, MarginLayout, Seo, VerticalSpace, Button} from "components";
 
 import {toggleDarkMode} from "../state/actions";
 import {getIsDarkMode} from "../state/selectors";
@@ -13,9 +13,11 @@ const IndexPage = ({isDarkMode, toggleMode}) => (
         <Seo title="Home" />
         <MarginLayout>
             <VerticalSpace />
+
             <Text value="content" bold fontSize={Text.SIZE.SIZE_36} paragraphs />
 
             <VerticalSpace />
+
             <button
                 onClick={toggleMode}
                 type="button"
@@ -23,6 +25,10 @@ const IndexPage = ({isDarkMode, toggleMode}) => (
             >
                 Change DarkMode
             </button>
+
+            <VerticalSpace />
+
+            <Button name="Change" onClick={toggleMode} type="secondary" />
 
             {/* <Link to="/secondPage/">Go to second page</Link> */}
         </MarginLayout>

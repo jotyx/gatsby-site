@@ -70,7 +70,7 @@ export const Seo = ({description, lang, meta, title}) => {
             ].concat(meta)}
         />
     );
-}
+};
 
 Seo.defaultProps = {
     lang: `en`,
