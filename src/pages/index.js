@@ -1,13 +1,11 @@
 import React from "react";
 import {Link} from "gatsby";
 
-import {MainLayout, Text, MarginLayout} from "components";
-import SEO from "../components/seo";
-import "../styles/index.scss";
+import {MainLayout, Text, MarginLayout, Seo} from "components";
 
 const IndexPage = () => (
     <MainLayout>
-        <SEO title="Home" />
+        <Seo title="Home" />
 
         <MarginLayout>
             <Text value="content" bold fontSize={Text.SIZE.SIZE_36} paragraphs />
