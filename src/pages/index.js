@@ -9,7 +9,7 @@ const IndexPage = () => (
     <MainLayout>
         <SEO title="Home" />
 
-        <Text value="content" />
+        <Text value="content" bold fontSize={Text.FontSizeEnum.SIZE_36} paragraphs />
 
         <Link to="/page-2/">Go to page 2</Link>
     </MainLayout>
