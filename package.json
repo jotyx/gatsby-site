@@ -39,7 +39,8 @@
     "redux": "^4.0.5"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^5.2.1"
+    "eslint-config-react-app": "^5.2.1",
+    "immutable": "^4.0.0-rc.12"
   },
   "keywords": [
     "gatsby"

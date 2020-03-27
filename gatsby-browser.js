@@ -5,3 +5,6 @@
  */
 
 import "./src/styles/global.scss";
+
+// Connect redux
+export {default as wrapRootElement} from './src/state/ReduxWrapper';
