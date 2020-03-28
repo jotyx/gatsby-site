@@ -1,9 +1,17 @@
 import React from "react";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
-import {Link} from "gatsby";
 
-import {MainLayout, Text, MarginLayout, Seo, VerticalSpace, Button} from "components";
+import {
+    MainLayout,
+    MarginLayout,
+    VerticalSpace,
+    BackgroundBox,
+    Text,
+    Seo,
+    Button,
+    Link,
+} from "components";
 
 import {toggleDarkMode} from "../state/actions";
 import {getIsDarkMode} from "../state/selectors";
@@ -11,27 +19,16 @@ import {getIsDarkMode} from "../state/selectors";
 const IndexPage = ({isDarkMode, toggleMode}) => (
     <MainLayout>
         <Seo title="Home" />
-        <MarginLayout>
-            <VerticalSpace />
-
-            <Text value="content" bold fontSize={Text.SIZE.SIZE_36} paragraphs />
-
-            <VerticalSpace />
-
-            <button
-                onClick={toggleMode}
-                type="button"
-                style={isDarkMode ? {backgroundColor: "black", color: "white", padding: "10px"} : {backgroundColor: "white", padding: "10px"}}
-            >
-                Change DarkMode
-            </button>
-
-            <VerticalSpace />
-
-            <Button name="Change" onClick={toggleMode} type="secondary" />
-
-            {/* <Link to="/secondPage/">Go to second page</Link> */}
-        </MarginLayout>
+        <BackgroundBox color={isDarkMode ? "#242424" : "#ebebeb"} fullHeight>
+            <MarginLayout size={MarginLayout.SIZES.MEDIUM}>
+                <VerticalSpace />
+                <Text value="content" bold fontSize={Text.SIZE.SIZE_36} paragraphs color="#FFFFFF" />
+                <VerticalSpace />
+                <Button name="Change dark mode" onClick={toggleMode} type="secondary" />
+                <VerticalSpace />
+                <Link to="/secondPage/" name="Go to second page" />
+            </MarginLayout>
+        </BackgroundBox>
     </MainLayout>
 );
 

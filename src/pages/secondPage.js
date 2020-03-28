@@ -1,14 +1,14 @@
 import React from "react";
-import {Link} from "gatsby";
 
-import {MainLayout, Seo} from "components";
+import {MainLayout, Seo, Link, Text, VerticalSpace} from "components";
 
 const SecondPage = () => (
     <MainLayout>
         <Seo title="Page two" />
-        <h1>Hi from the second page</h1>
-        <p>Welcome to page 2</p>
-        <Link to="/">Go back to the homepage</Link>
+        <Text value="Hi from the second page 2" fontSize={Text.SIZE.SIZE_36} paragraphs />
+        <Text value="Welcome to page 2" fontSize={Text.SIZE.SIZE_20} paragraphs />
+        <VerticalSpace />
+        <Link to="/" name="Go back to the homepage" />
     </MainLayout>
 );
 

@@ -23,5 +23,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
     disabled: false,
+    /** bootstrap variant */
     type: "primary",
 };
